@@ -5,6 +5,8 @@ public class Main {
     public static String StringChallenge(String str) {
 
         String word = "";
+        String finalWord = "";
+        int contador = 0;
 
         for(int i = 0; i<str.length(); i++) {
 
@@ -19,7 +21,22 @@ public class Main {
           }
         }
 
-        return word;
+        word += "prhj2f0t54b"; //ALTERAR AQUI PARA SUA "Your ChallengeToken:"
+
+        for(int i = 0; i<word.length(); i++){
+            String letter = String.valueOf(word.charAt(i));
+            if(contador < 3){
+                finalWord += letter;
+                contador++;
+            } else {
+                finalWord += "_";
+                contador = 0;
+            }
+
+        }
+
+
+        return finalWord;
     }
 
     public static void main(String[] args) {
